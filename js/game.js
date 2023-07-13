@@ -116,7 +116,7 @@ class Game{
                  }
                  if(frameCount % 40 === 0){
                     //chame addObstacles()
-                    this.addObstacles;
+                    this.addObstacles();
                  }
                  
                   if (player.index !== null) {
@@ -168,6 +168,13 @@ class Game{
     {       
             var x, y;
             //escreva o código para criar um obstáculo na posição x aleatória.
+          addObstacles() { var x, y; x = random(0, width-100);
+          y = 0 var obstacle = createSprite(x, y);
+          obstacle.addImage("obstacle", obstacleImage);
+          obstacle.velocityY = 4;
+          obstacle.scale = 0.15;
+          obstacleGroup.add(obstacle);
+      }
             let Obstacle;
 
              function setup() {
